@@ -1,203 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaghik's Photography</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #5f6076; 
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        /* Sticky Navbar */
-        nav {
-            background-color: #444;
-            position:sticky;
-            top: 0;
-            //z-index: 1000;
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-            nav a {
-                color: #fff;
-                margin: 0 15px;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s ease;
-            }
-
-                nav a:hover {
-                    color: #00bcd4;
-                }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 50%;
-            margin: auto;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-
-        }
-
-            .gallery img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-                transition: transform 0.3s ease;
-            }
-
-                .gallery img:hover {
-                    transform: scale(1.05);
-                }
-
-        .see-more {
-            display: block;
-            width: 10%;
-            margin: 20px auto;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-            .see-more:hover {
-                background-color: #00bcd4;
-            }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
-        }
-
-        /* Section Background Colors */
-        #nature {
-            background-color: #e0f7fa;
-        }
-
-        #street {
-            background-color: #fce4ec;
-        }
-
-        #event {
-            background-color: #fff3e0;
-        }
-        #commercial {
-            background-color: #F5F5F5;
-            //2C2C2C
-        }
-
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Django Girls blog</title>
 </head>
 <body>
-
     <header>
-        <h1>Shaghik's Photography</h1>
-        <p>Capturing Moments Through My Lens</p>
+        <h1><a href="/">Django Girls Blog</a></h1>
     </header>
 
-    <nav>
-        <a href="post_list.html">Home</a>
-        <a href="nature.html">Nature Photography</a>
-        <a href="street.html">Street Photography</a>
-       <!-- <a href="event.html">Event Photography</a>
-        <a href="commercial.html">Commercial Photography</a>-->
+    <article>
+        <time>published: 14.06.2014, 12:14</time>
+        <h2><a href="">My first post</a></h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </article>
 
-    </nav>
-
-    <section id="nature">
-        <h2>Nature Photography</h2>
-        <div class="gallery">
-            <img src="images/nature/nature3.jpg" alt="Nature Photo 3">
-            <img src="images/nature/nature4.jpg" alt="Nature Photo 4">
-            <img src="images/nature/nature5.jpg" alt="Nature Photo 5">
-            <img src="images/nature/nature6.jpg" alt="Nature Photo 6">
-            <img src="images/nature/nature7.jpg" alt="Nature Photo 7">
-            <img src="images/nature/nature8.jpg" alt="Nature Photo 8">
-        </div>
-        <a href="nature.html" class="see-more">See More →</a>
-    </section>
-
-    <section id="street">
-        <h2>Street Photography</h2>
-        <div class="gallery">
-            <img src="images/street/street1.jpg" alt="Street Photo 1">
-            <img src="images/street/street2.jpg" alt="Street Photo 2">
-            <img src="images/street/street3.jpg" alt="Street Photo 3">
-            <img src="images/street/street4.jpg" alt="Street Photo 4">
-            <img src="images/street/street5.jpg" alt="Street Photo 5">
-            <img src="images/street/street6.jpg" alt="Street Photo 6">
-        </div>
-        <a href="street.html" class="see-more">See More →</a>
-    </section>
-
-   <!-- <section id="event">
-        <h2>Event Photography</h2>
-        <div class="gallery">
-            <img src="event1.jpg" alt="Event Photo 1">
-            <img src="event2.jpg" alt="Event Photo 2">
-            <img src="event3.jpg" alt="Event Photo 3">
-            <img src="event4.jpg" alt="Event Photo 4">
-            <img src="event5.jpg" alt="Event Photo 5">
-        </div>
-        <a href="event.html" class="see-more">See More →</a>
-    </section>
-
-    <section id="commercial">
-        <h2>Commercial Photography</h2>
-        <div class="gallery">
-            <img src="event1.jpg" alt="Event Photo 1">
-            <img src="event2.jpg" alt="Event Photo 2">
-            <img src="event3.jpg" alt="Event Photo 3">
-            <img src="event4.jpg" alt="Event Photo 4">
-            <img src="event5.jpg" alt="Event Photo 5">
-        </div>
-        <a href="commercial.html" class="see-more">See More →</a>
-    </section>-->
-
-    <footer>
-        <p>&copy; 2025 Shaghik's Photography. All Rights Reserved.</p>
-    </footer>
-
+    <article>
+        <time>published: 14.06.2014, 12:14</time>
+        <h2><a href="">My second post</a></h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+    </article>
 </body>
-</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=60%,initial-scale=1.0">
+    <title>Nature Photography - Shaghik's Photography</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  <!-- Load external CSS if needed -->
+</head>
+<body>
+
+    <header>
+        <h1>Nature Photography</h1>
+        <p>Exploring the Beauty of Nature Through My Lens</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'post_list' %}">Home</a>
+        <a href="{% url 'nature_photography' %}">Nature Photography</a>
+        <a href="{% url 'street_photography' %}">Street Photography</a>
+    </nav>
+
+    <section class="gallery">
+        <img src="{% static 'images/nature/nature1.jpg' %}" alt="Nature Photo 1">
+        <img src="{% static 'images/nature/nature2.jpg' %}" alt="Nature Photo 2">
+        <img src="{% static 'images/nature/nature3.jpg' %}" alt="Nature Photo 3">
+        <img src="{% static 'images/nature/nature4.jpg' %}" alt="Nature Photo 4">
+        <img src="{% static 'images/nature/nature5.jpg' %}" alt="Nature Photo 5">
+        <img src="{% static 'images/nature/nature6.jpg' %}" alt="Nature Photo 6">
+        <img src="{% static 'images/nature/nature7.jpg' %}" alt="Nature Photo 7">
+        <img src="{% static 'images/nature/nature8.jpg' %}" alt="Nature Photo 8">
+        <img src="{% static 'images/nature/nature9.jpg' %}" alt="Nature Photo 9">
+        <img src="{% static 'images/nature/nature10.jpg' %}" alt="Nature Photo 10">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shaghik's Photography. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

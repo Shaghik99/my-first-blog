@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Photography - Shaghik's Photography</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  <!-- Load external CSS if needed -->
+</head>
+<body>
+
+    <header>
+        <h1>Street Photography</h1>
+        <p>Exploring the Beauty of Streets Through My Lens</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'post_list' %}">Home</a>
+        <a href="{% url 'nature_photography' %}">Nature Photography</a>
+        <a href="{% url 'street_photography' %}">Street Photography</a>
+    </nav>
+
+    <section class="gallery">
+        <img src="{% static 'images/street/street1.jpg' %}" alt="Street Photo 1">
+        <img src="{% static 'images/street/street2.jpg' %}" alt="Street Photo 2">
+        <img src="{% static 'images/street/street3.jpg' %}" alt="Street Photo 3">
+        <img src="{% static 'images/street/street4.jpg' %}" alt="Street Photo 4">
+        <img src="{% static 'images/street/street5.jpg' %}" alt="Street Photo 5">
+        <img src="{% static 'images/street/street6.jpg' %}" alt="Street Photo 6">
+        <img src="{% static 'images/street/street7.jpg' %}" alt="Street Photo 7">
+        <img src="{% static 'images/street/street8.jpg' %}" alt="Street Photo 8">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shaghik's Photography. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

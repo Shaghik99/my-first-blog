@@ -1,6 +1,15 @@
 ﻿{% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
+<!--<nav>
+    <a href="post_list.html">Home</a>
+    <a href="nature.html">Nature Photography</a>
+    <a href="street.html">Street Photography</a>
+    <!-- <a href="event.html">Event Photography</a>
+     <a href="commercial.html">Commercial Photography</a>-->
+
+</nav>
     {% for post in posts %}
 <article class="post">
     <time class="date">
@@ -10,4 +19,32 @@
     <p>{{ post.text|linebreaksbr }}</p>
 </article>
     {% endfor %}
+
+<!-- Nature Photography Section -->
+<section id="nature">
+    <h3>Nature Photography</h3>
+    <div class="gallery">
+        <img src="{% static 'images/nature/nature3.jpg' %}" alt="Nature Photo 3">
+        <img src="{% static 'images/nature/nature4.jpg' %}" alt="Nature Photo 4">
+        <img src="{% static 'images/nature/nature5.jpg' %}" alt="Nature Photo 5">
+        <img src="{% static 'images/nature/nature6.jpg' %}" alt="Nature Photo 6">
+        <img src="{% static 'images/nature/nature7.jpg' %}" alt="Nature Photo 7">
+        <img src="{% static 'images/nature/nature8.jpg' %}" alt="Nature Photo 8">
+    </div>
+    <a href="{% url 'nature_photography' %}" class="see-more">See More →</a>
+</section>
+
+<!-- Street Photography Section -->
+<section id="street">
+    <h3>Street Photography</h3>
+    <div class="gallery">
+        <img src="{% static 'images/street/street1.jpg' %}" alt="Street Photo 1">
+        <img src="{% static 'images/street/street2.jpg' %}" alt="Street Photo 2">
+        <img src="{% static 'images/street/street3.jpg' %}" alt="Street Photo 3">
+        <img src="{% static 'images/street/street4.jpg' %}" alt="Street Photo 4">
+        <img src="{% static 'images/street/street5.jpg' %}" alt="Street Photo 5">
+        <img src="{% static 'images/street/street6.jpg' %}" alt="Street Photo 6">
+    </div>
+    <a href="{% url 'street_photography' %}" class="see-more">See More →</a>
+</section>
 {% endblock %}

@@ -11,11 +11,15 @@
 <body>
     <header class="page-header">
         <div class="container">
-            {% if user.is_authenticated %}
+            <!-- {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu" title="Add post">
+        {% include './icons/file-earmark-plus.svg' %}
+    </a>
+    {% endif %}-->
             <a href="{% url 'post_new' %}" class="top-menu" title="Add post">
                 {% include './icons/file-earmark-plus.svg' %}
             </a>
-            {% endif %}
+
             <h1><a href="/">Shaghik's Photography Blog</a></h1>
         </div>
     </header>

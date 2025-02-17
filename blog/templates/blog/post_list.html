@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block content %}
-<!--<nav>
+<!-- <nav>
     <a href="post_list.html">Home</a>
     <a href="nature.html">Nature Photography</a>
     <a href="street.html">Street Photography</a>
     <!-- <a href="event.html">Event Photography</a>
-     <a href="commercial.html">Commercial Photography</a>-->
-
-</nav>
+     <a href="commercial.html">Commercial Photography</a>
+</nav> 
+-->
     {% for post in posts %}
 <article class="post">
     <time class="date">
@@ -20,7 +20,7 @@
 </article>
     {% endfor %}
 
-<!-- Nature Photography Section -->
+<!-- Nature Photography Section 
 <section id="nature">
     <h3>Nature Photography</h3>
     <div class="gallery">
@@ -34,7 +34,7 @@
     <a href="{% url 'nature_photography' %}" class="see-more">See More →</a>
 </section>
 
-<!-- Street Photography Section -->
+ Street Photography Section
 <section id="street">
     <h3>Street Photography</h3>
     <div class="gallery">
@@ -46,5 +46,5 @@
         <img src="{% static 'images/street/street6.jpg' %}" alt="Street Photo 6">
     </div>
     <a href="{% url 'street_photography' %}" class="see-more">See More →</a>
-</section>
+</section>-->
 {% endblock %}
